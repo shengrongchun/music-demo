@@ -1,0 +1,62 @@
+@charset "utf-8";
+/*************************************************
+ *************************************************/
+blockquote, body, button, dd, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, hr, html, input, lengend, li, ol, p, pre, td, textarea, th, ul {
+    margin: 0;
+    padding: 0
+}
+body, button, input, select, textarea, th {
+    color: #333;
+    background-color: #fff;
+    font-size: 14px;
+    line-height: 1.5;
+    font-family: poppin, 'PingFang SC', Tahoma, Arial, \5FAE\8F6F\96C5\9ED1, sans-serif;
+    font-family: Tahoma, Arial, \5FAE\8F6F\96C5\9ED1, sans-serif/9
+}
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%
+}
+li {
+    list-style: none
+}
+img {
+    border: 0 none;
+    -ms-interpolation-mode: bicubic;
+    image-rendering: optimizeQuality
+}
+input[type=button], input[type=submit] {
+    cursor: pointer
+}
+button {
+    cursor: pointer;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+a {
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+}
+a:hover {
+    color: #31c27c;
+    text-decoration: none
+}
+a:focus, button:focus, input:focus {
+    outline: 0
+}
+.text-center {text-align: center;}
+.clear-fix {zoom: 1;}
+.clear-fix:before, .clear-fix:after {display: table;line-height: 0;content: "";}
+.clear-fix:after {clear: both; }
+/*滚动条美化*/
+.mCSB_container::-webkit-scrollbar{width:0;height:0}
+
+html,body{
+    height: 100%;
+    background-color: #777970;
+}
+.hidden {
+    display: none !important;
+}

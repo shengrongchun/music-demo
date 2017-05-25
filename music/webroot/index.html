@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>QQ音乐</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/music.css">
+    <!-- 滚动条美化样式文件 -->
+    <link rel="stylesheet" type="text/css" href="css/jquery.mCustomScrollbar.min.css">
+</head>
+<body>
+    <!-- 模糊化背景 -->
+    <canvas id="blur-canvas"></canvas>
+    <div id="blur"></div>
+    <!-- 头部logo -->
+    <div class="header">
+        <div class="logo" title="hello everybody">
+            ♫ QQ音乐
+        </div>
+        <div class="rightBtn">
+            <a>登录</a>
+            <a>注册</a>
+        </div>
+    </div>
+    <!-- 中间主体区域 -->
+    <div class="center">
+        <div class="container">
+            <div class="btn-bar">
+                <!-- tab按钮区 -->
+                <div class="btn-box" id="btn-area">
+                   <!--  <span class="btn" data-action="playing" hidden>正在播放</span> -->
+                    <span class="btn active" data-action="list">歌曲列表</span>
+                    <span class="btn" data-action="sheet">音乐列表</span>
+                    <span class="btn" data-action="search">歌曲搜索</span>
+                </div>
+                <!-- 搜索框 -->
+                <div class="btn-box" id="search-area" hidden>
+                    <span class="input">
+                        <input type="text" name="wd" id="search-wd" placeholder="搜索歌手、歌名、专辑">
+                    </span>
+                    <span class="search-btn search-close" title="点击关闭搜索框">╳</span>
+                    <span class="search-btn search-submit">搜索</span>
+                </div>
+            </div>  <!--class="btn-bar"-->
+
+            <div class="data-area">
+                <!--音乐列表-->
+                <div id="sheet" class="data-box" hidden></div>
+                <!--歌曲列表-->
+                <div id="main-list" class="music-list data-box"></div>
+            </div>  <!--class="data-area"-->
+            <!-- 右侧封面及歌词展示 -->
+            <div class="player" id="player">
+                <!--歌曲封面-->
+                <div class="cover">
+                    <img src="img/player_cover.png" class="music-cover" id="music-cover">
+                </div>
+                <!--滚动歌词-->
+                <div class="lyric">
+                    <ul id="lyric"></ul>
+                </div>
+                <div id="music-info" title="点击查看歌曲信息">i</div>
+            </div>
+
+
+        </div><!--class="container"-->
+    </div>  <!--class="center"-->
+    <!-- 播放器底部区域 -->
+    <div class="footer">
+        <div class="container">
+            <div class="con-btn">
+                <a  class="player-btn btn-prev" title="上一首"></a>
+                <a  class="player-btn btn-play" title="暂停/继续"></a>
+                <a  class="player-btn btn-next" title="下一首"></a>
+            </div>  <!--class="con-btn"-->
+            
+            <div class="vol">
+                <div class="quiet">
+                    <a class="player-btn btn-quiet" title="静音"></a>
+                </div>
+                <div class="volume">
+                    <div class="volume-box">  
+                        <div id="volume-progress" class="mkpgb-area"></div>
+                    </div>
+                </div>
+            </div>  <!--class="footer"-->
+            <!--进度条-->
+            <div class="progress">
+                <div class="progress-box">  
+                    <div id="music-progress" class="mkpgb-area"></div>
+                </div>
+            </div>  <!--class="progress"-->
+        </div>  <!--class="container"-->
+    </div>  <!--class="footer"-->
+
+    <!-- jquery -->
+    <script src="js/jquery.min.js"></script>
+    <!-- 播放器数据加载模块 -->
+    <script src="js/ajax.js"></script>
+    <!-- 音乐列表配置 -->
+    <script src="js/musicList.js"></script>
+    <!-- 主函数 -->
+    <script src="js/function.js"></script>
+    <!-- 主js -->
+    <script src="js/music.js"></script>
+    <!-- 滚动条美化插件 -->
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+</body>
+</html>
